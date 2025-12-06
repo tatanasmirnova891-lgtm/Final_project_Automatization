@@ -1,7 +1,7 @@
 # Автоматизация обработки чеков торговой сети
 ## Описание проекта
 Скрипт генерирует CSV-файлы с данными чеков и загружает их в PostgreSQL.    
-Автоматизация через Планировщик заданий Windows (пн-сб, 09:00/09:30).
+Автоматизация через Планировщик заданий Windows (пн-сб, 10:30/10:45).
 
 __Формат CSV__: doc_id,item,category,amount,price,discount    
 ## Требования
@@ -12,8 +12,8 @@ __Формат CSV__: doc_id,item,category,amount,price,discount
 ## Установка
 1. Клонируйте репозиторий и  зайдите в папку, где лежит проект
 ```powershell
-git clone https://github.com/yourusername/sales-automation.git
-cd project_root
+git clone https://github.com/tatanasmirnova891-lgtm/Final_project_Automatization.git
+cd Final_project_Automatization/project_root
 ```
 2. Создайте виртуальное окружение
 В PowerShell перейди в папку project_root и создайте виртуальное окружение
