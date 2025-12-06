@@ -11,7 +11,7 @@ if datetime.now().weekday() == 6:  # 6 = воскресенье
     print("Сегодня воскресенье, скрипт пропущен")
     exit()
 
-BASE_DIR = os.getenv('PROJECT_ROOT', r"C:\Users\User\Downloads\SIMULATIVE\Final_project_Automatization\project_root")
+BASE_DIR = os.getenv('PROJECT_ROOT', r"C:\Users\User\Downloads\SIMULATIVE\Final_project_Automatization\project_root") # ЗАМЕНИТЬ ПУТЬ ДО ПАПКИ
 DATA_FOLDER = os.path.join(BASE_DIR, 'data')
 
 CATEGORIES = [

@@ -1,7 +1,7 @@
 # Автоматизация обработки чеков торговой сети
 ## Описание проекта
 Скрипт генерирует CSV-файлы с данными чеков и загружает их в PostgreSQL.    
-Автоматизация через Планировщик заданий Windows (пн-сб, 10:30/10:45).
+Автоматизация через Планировщик заданий Windows (пн-сб, 09:00/09:30).
 
 __Формат CSV__: doc_id,item,category,amount,price,discount    
 ## Требования
@@ -12,10 +12,11 @@ __Формат CSV__: doc_id,item,category,amount,price,discount
 ## Установка
 1. Клонируйте репозиторий и  зайдите в папку, где лежит проект
 ```powershell
-git clone git clone https://github.com/tatanasmirnova891-lgtm/Final_project_Automatization.git
-cd Final_project_Automatization/project_root
+git clone https://github.com/yourusername/sales-automation.git
+cd project_root
 ```
 2. Создайте виртуальное окружение
+В PowerShell перейди в папку project_root и создайте виртуальное окружение
 ```powershell
 python -m venv .venv
 ```
@@ -35,7 +36,29 @@ PASSWORD= #пароль
 PROJECT_ROOT=C:\path\to\your\project # путь до папки с проектом
 DATA_FOLDER=C:\path\to\your\project\data #путь до папки со сгенерированными csv-файлами
 ```
-5. Перейдите в папку с проектом (выйти из окружения) и протестируйте скрипты
+5. __ВАЖНО!__    
+В указанных файлах замените путь на тот. где лежит проект (!!!):
+*   config.py
+```python
+PROJECT_ROOT = os.getenv('PROJECT_ROOT', r"C:\Users\User\Downloads\SIMULATIVE\Final_project_Automatization\project_root") # ЗАМЕНИТЬ ПУТЬ ДО ПАПКИ
+```
+*   generate_dumps.py
+```python
+BASE_DIR = os.getenv('PROJECT_ROOT', r"C:\Users\User\Downloads\SIMULATIVE\Final_project_Automatization\project_root") # ЗАМЕНИТЬ ПУТЬ ДО ПАПКИ
+```
+*   run_generate.bat
+```python
+cd /d "C:\Users\User\Downloads\SIMULATIVE\Final_project_Automatization\project_root" # ЗАМЕНИТЬ ПУТЬ ДО ПАПКИ
+```
+*   run_database.bat
+```python
+cd /d "C:\Users\User\Downloads\SIMULATIVE\Final_project_Automatization\project_root" # ЗАМЕНИТЬ ПУТЬ ДО ПАПКИ
+```
+*   setup_tasks.ps1
+```powershell
+$project_path = "C:\Users\User\Downloads\SIMULATIVE\Final_project_Automatization\project_root" # ЗАМЕНИТЬ ПУТЬ ДО ПАПКИ
+```
+6. После того, как все пути изменены, перейдите в папку с проектом (выйти из окружения) и протестируйте скрипты
 ```powershell
 # Генерация CSV
 
