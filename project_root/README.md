@@ -41,16 +41,7 @@ python -m venv .venv
 ```powershell
 pip install -r requirements.txt
 ```
-4. Создайте `config.env`. Для этого в блокноте заполните необходимые параментры:
-```python
-HOST=localhost
-PORT=5432
-DBNAME= #имя_вашей_БД
-USER= #имя_пользователя
-PASSWORD= #пароль
-PROJECT_ROOT=C:\path\to\your\project # путь до папки с проектом
-DATA_FOLDER=C:\path\to\your\project\data #путь до папки со сгенерированными csv-файлами
-```
+4. Создайте `config.env`. Для этого в блокноте заполните необходимые параментры, взяв за шаблон файл `config.env.example`:
 5. __ВАЖНО!__    
 В указанных файлах замените путь на тот. где лежит проект (!!!):
 *   config.py
