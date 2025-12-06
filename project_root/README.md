@@ -16,7 +16,6 @@ git clone https://github.com/tatanasmirnova891-lgtm/Final_project_Automatization
 cd Final_project_Automatization/project_root
 ```
 2. Создайте виртуальное окружение
-В PowerShell перейди в папку project_root и создайте виртуальное окружение
 ```powershell
 python -m venv .venv
 ```
