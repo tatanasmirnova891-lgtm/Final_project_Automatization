@@ -9,6 +9,20 @@ __Формат CSV__: doc_id,item,category,amount,price,discount
 *   Python 3.11+
 *   PostgreSQL 13+ (localhost:5432)
 *   PowerShell (от администратора)
+## Структура проекта
+project_root/
+├── generate_dumps.py      # Генерация чеков
+├── database.py            # Создание и наполнение таблиц в БД 
+├── setup_tasks.ps1        # Создание задач
+├── config.env             # Конфигурационный файл
+├── config.py
+├── run_generate.bat        # BAT-файл для Планировщика задач
+├── run_database.bat        # BAT-файл для Планировщика задач
+├── requirements.txt        # файл со списком Python-пакетов
+├── sql/create_database.sql # DDL-команды
+├── data/                  # Сгенерированные CSV-файлы
+├── img/                   # Скриншоты из Планировщика задач Windows
+└── README.md              ✅
 ## Установка
 1. Клонируйте репозиторий и  зайдите в папку, где лежит проект
 ```powershell
